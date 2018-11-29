@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class echar {
     @RequestMapping("testEchar")
     public String testEchar(){
-
+        System.out.println("111");
         return "index";
     }
 }
