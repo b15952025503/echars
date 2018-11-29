@@ -8,6 +8,7 @@ public class echar {
     @RequestMapping("testEchar")
     public String testEchar(){
         System.out.println("1111");
+        System.out.println("2222");
         return "index";
     }
 }
