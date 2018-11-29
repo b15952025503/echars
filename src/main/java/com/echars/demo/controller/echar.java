@@ -8,7 +8,7 @@ public class echar {
     @RequestMapping("testEchar")
     public String testEchar(){
         System.out.println("1111");
-        System.out.println("2222");
+        System.out.println("22加了个22");
         return "index";
     }
 }
