@@ -9,6 +9,8 @@ public class echar {
     public String testEchar(){
         System.out.println("1111");
         System.out.println("22加了个111122");
+        System.out.println("22加了个111122");
+
         return "index";
     }
 }
