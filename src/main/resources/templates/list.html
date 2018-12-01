@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+    <script src="jquery-3.3.1.min.js" language="JavaScript"></script>
+    <script src="echarts.min.js" language="JavaScript"></script>
+    <script src="layui.js" language="JavaScript"></script>
+
+<script type="text/javascript">
+    $(function(){
+        //按钮单击时执行
+        $("#testAjax").click(function(){
+
+            //Ajax调用处理
+            $.ajax({
+                type: "POST",
+                url: "test.php",
+                data: "name=garfield&age=18",
+                success: function(data){
+                    $("#myDiv").html('<h2>'+data+'</h2>');
+                }
+            });
+
+        });
+    });
+</script>
+</head>
+<body>
+<div id="myDiv"><h2>通过 AJAX 改变文本</h2></div>
+<button id="testAjax" type="button">Ajax改变内容</button>
+</body>
+
+</html>
