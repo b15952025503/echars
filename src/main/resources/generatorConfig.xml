@@ -40,17 +40,8 @@
 
         <!-- 通讯录人员表 -->
 
-        <table schema="demo" tableName="cunits"></table>
-        <table schema="demo" tableName="education"></table>
-        <table schema="demo" tableName="employees"></table>
-        <table schema="demo" tableName="judgment"></table>
-        <table schema="demo" tableName="perform_category"></table>
-        <table schema="demo" tableName="politics"></table>
-        <table schema="demo" tableName="procity"></table>
+
         <table schema="demo" tableName="rectification"></table>
-        <table schema="demo" tableName="regulatory"></table>
-        <table schema="demo" tableName="relation"></table>
-        <table schema="demo" tableName="users"></table>
-        <table schema="demo" tableName="tp_mz"></table>
+
     </context>
 </generatorConfiguration>

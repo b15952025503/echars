@@ -2,7 +2,9 @@
 <html>
 <head lang="en">
     <title>Spring Boot Demo - PDF</title>
+    <meta charset="UTF-8"/>
     <link href="http://localhost:8999/css/index.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <style>
         @page {
             size: 210mm 297mm; /*设置纸张大小:A4(210mm 297mm)、A3(297mm 420mm) 横向则反过来*/
@@ -22,12 +24,20 @@
                 color:#000;
             };
         }
-    </style>
-</head>
-<body style="font-family: 宋体">
-<div>1.标题-中文</div>
-<h2>${title}</h2>
 
+    </style>
+
+</head>
+<body style="font-family: 'SimSun'">
+<h2>${title}</h2>
+<div>
+<#if map?exists>
+    <#list map as m>
+    <div>${m.rname}</div>
+        <div>${m.age}</div>
+    </#list>
+</#if>
+</div>
 <div>2.按钮:按钮的边框需要写css渲染</div>
 <button class="a" style="border: 1px solid #000000"> click me t-p</button>
 <div id="divsub"></div>
@@ -70,5 +80,7 @@
     <label>姓名:</label>
     <input id="input1" aria-label="dasdasd" type="text" value="123你是"/>
 </div>
+
+
 </body>
 </html>

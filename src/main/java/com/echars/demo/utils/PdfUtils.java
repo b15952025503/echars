@@ -90,13 +90,13 @@ public class PdfUtils {
         ITextRenderer renderer = new ITextRenderer();
         Document doc = generateDoc(configurer, templateName, listVars.get(0));
         renderer.setDocument(doc, null);
+
         //设置字符集(宋体),此处必须与模板中的<body style="font-family: SimSun">一致,区分大小写,不能写成汉字"宋体"
         ITextFontResolver fontResolver = renderer.getFontResolver();
         fontResolver.addFont("simsun.ttc", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
         //展现和输出pdf
         renderer.layout();
         renderer.createPDF(out, false);
-
         //根据参数集个数循环调用模板,追加到同一个pdf文档中
         //(注意:此处从1开始,因为第0是创建pdf,从1往后则向pdf中追加内容)
         for (int i = 1; i < listVars.size(); i++) {
@@ -152,7 +152,6 @@ public class PdfUtils {
             LOGGER.error(e.getMessage(), e);
         }
     }
-
 }
 
 
